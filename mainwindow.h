@@ -3,12 +3,15 @@
 
 #include <QMainWindow>
 
-class MainWindow : public QMainWindow
+class MainWindow : public QObject
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(QObject *parent = nullptr);
     ~MainWindow();
+
+
+    Q_INVOKABLE void readTextFile(QString filePath);
 };
 #endif // MAINWINDOW_H
