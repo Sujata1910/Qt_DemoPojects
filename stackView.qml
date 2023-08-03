@@ -1,7 +1,10 @@
 import QtQuick 2.14
 import QtQuick 2.2
 import QtQuick.Controls 2.14
+import QtQuick.Dialogs 1.0
 import MainWindowLib 1.0
+
+
 
 ApplicationWindow {
     id: mainStack
@@ -9,6 +12,45 @@ ApplicationWindow {
     width: 1365
     height: 765
     visible: true
+
+    MainWindow{
+        id: formClassId
+
+        function readFile(fileUrl) {
+
+                    console.log("Reading file: " + fileUrl)
+                }
+
+//        function writeFile(fileUrl, content) {
+
+//                console.log("Writing to file: " + fileUrl)
+//                console.log("Content: " + content)
+//            }
+    }
+
+
+    FileDialog {
+        id: fileDialog
+        title: "Please choose a file"
+        folder: shortcuts.home
+       // nameFilters: ".png"
+
+        onAccepted: {
+            formClassId.readTextFile(fileDialog.fileUrls)
+            console.log("You chose: " + fileDialog.fileUrls)
+           // formClassId.writeFile(fileDialog.fileUrls)
+            console.log()
+            fileDialog.close()
+
+        }
+        onRejected: {
+            console.log("Canceled")
+            fileDialog.close()
+        }
+//        Component.onCompleted: visible = true
+    }
+
+
 
     Rectangle{
         id: upperrec
@@ -49,12 +91,13 @@ ApplicationWindow {
                 onClicked: console.log("Button 2 clicked")
             }
 
+
             RoundButton {
                 text: "Button 3"
                 font.pixelSize: 20
                 width: 100
                 height: 50
-                onClicked: console.log("Button 3 clicked")
+                onClicked: fileDialog.open()
             }
 
             RoundButton {

@@ -11,6 +11,11 @@ class MainWindow : public QObject
     Q_OBJECT
 
 public:
+    MainWindow(QObject *parent = nullptr);
+    ~MainWindow();
+
+
+    Q_INVOKABLE void readTextFile(QString filePath);
     Q_INVOKABLE bool isValidEmail(const QString &email);
     explicit MainWindow(QObject *parent=nullptr);
 };
