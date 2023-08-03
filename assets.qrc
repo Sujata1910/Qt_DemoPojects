@@ -1,5 +1,10 @@
 <RCC>
     <qresource prefix="/">
         <file>stackView.qml</file>
+        <file>SignUp.qml</file>
+        <file>passuserimg/pass.png</file>
+        <file>passuserimg/password.png</file>
+        <file>passuserimg/username.png</file>
+        <file>passuserimg/visible.png</file>
     </qresource>
 </RCC>
