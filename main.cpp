@@ -10,9 +10,9 @@ int main(int argc, char *argv[])
     app.setOrganizationDomain("https://github.com/8-DK");
     QQmlApplicationEngine engine;
 
-  //  qmlRegisterType<MainWindow>("MainWindowLib", 1, 0, "MainWindow");
+     qmlRegisterType<MainWindow>("MainWindowLib", 1, 0, "MainWindow");
     engine.load(QUrl(QStringLiteral("qrc:/stackView.qml")));
-    // engine.load(QUrl(QStringLiteral("qrc:/st.qml")));
+    // engine.load(QUrl(QStringLiteral("qrc:/.qml")));
 
 
     return app.exec();

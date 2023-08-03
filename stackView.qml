@@ -1,7 +1,7 @@
 import QtQuick 2.14
 import QtQuick 2.2
 import QtQuick.Controls 2.14
-
+import MainWindowLib 1.0
 
 ApplicationWindow {
     id: mainStack
@@ -30,11 +30,15 @@ ApplicationWindow {
                 centerIn: parent
             }
             RoundButton {
-                text: "Button 1"
+                text: "LogIn"
                 font.pixelSize: 20
                 width: 100
                 height: 50
-                onClicked: console.log("Button 1 clicked")
+                onClicked:{
+                    mainStackView.pop()
+                    mainStackView.push("loginpage.qml")
+                    console.log("Button 1 clicked")
+                }
             }
 
             RoundButton {
