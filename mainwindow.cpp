@@ -1,21 +1,19 @@
 #include "mainwindow.h"
+#include <QDebug>
+#include<QFile>
 #include <QCryptographicHash>
-#include <QDebug>
-#include <QFile>
-#include <QDebug>
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QByteArray>
+#include <QJsonArray>
 
-MainWindow:: MainWindow(QObject *parent)
-    : QObject(parent)
-
-
-bool MainWindow::isValidEmail(const QString &email)
+bool MainWindow::isValidEmail(QString email)
 {
-    // Regular expression for email validation
     QRegularExpression regex("\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b");
-    bool isValid=regex.match(email).hasMatch();
-//    emit emailValidationResult(isValid);
-    return isValid;
+    return regex.match(email).hasMatch();
+
 }
+
 MainWindow::MainWindow(QObject *parent ):
     QObject(parent)
 {
@@ -37,5 +35,7 @@ if (file.open(QIODevice::ReadOnly | QIODevice::Text))
     qDebug()<<"strings.."<<strings;
 }
 }
+
+
 
 

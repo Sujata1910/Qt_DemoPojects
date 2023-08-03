@@ -1,8 +1,10 @@
 import QtQuick 2.14
 import QtQuick 2.2
 import QtQuick.Controls 2.14
-import QtQuick.Dialogs 1.0
 import MainWindowLib 1.0
+import Qt.labs.settings 1.0
+import QtQuick.Dialogs 1.0
+
 
 
 
@@ -88,7 +90,10 @@ ApplicationWindow {
                 font.pixelSize: 20
                 width: 100
                 height: 50
-                onClicked: console.log("Button 2 clicked")
+                onClicked: {
+                    mainStackView.pop();
+                    mainStackView.push("SignUp.qml")
+                }
             }
 
 
