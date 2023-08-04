@@ -20,14 +20,14 @@ ApplicationWindow {
 
         function readFile(fileUrl) {
 
-                    console.log("Reading file: " + fileUrl)
-                }
+            console.log("Reading file: " + fileUrl)
+        }
 
-//        function writeFile(fileUrl, content) {
+        //        function writeFile(fileUrl, content) {
 
-//                console.log("Writing to file: " + fileUrl)
-//                console.log("Content: " + content)
-//            }
+        //                console.log("Writing to file: " + fileUrl)
+        //                console.log("Content: " + content)
+        //            }
     }
 
 
@@ -35,12 +35,12 @@ ApplicationWindow {
         id: fileDialog
         title: "Please choose a file"
         folder: shortcuts.home
-       // nameFilters: ".png"
+        // nameFilters: ".png"
 
         onAccepted: {
             formClassId.readTextFile(fileDialog.fileUrls)
             console.log("You chose: " + fileDialog.fileUrls)
-           // formClassId.writeFile(fileDialog.fileUrls)
+            // formClassId.writeFile(fileDialog.fileUrls)
             console.log()
             fileDialog.close()
 
@@ -49,7 +49,7 @@ ApplicationWindow {
             console.log("Canceled")
             fileDialog.close()
         }
-//        Component.onCompleted: visible = true
+        //        Component.onCompleted: visible = true
     }
 
 
@@ -110,7 +110,10 @@ ApplicationWindow {
                 font.pixelSize: 20
                 width: 100
                 height: 50
-                onClicked: console.log("Button 4 clicked")
+                onClicked: {
+                    mainStackView.pop()
+                    mainStackView.push("UserFrom.qml")
+                }
             }
 
             RoundButton {

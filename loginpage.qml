@@ -192,9 +192,6 @@ Rectangle{
                     }
 
                 }
-//                onClicked: {
-//                    stack2.push("listview.qml")
-//                }
             }
         }
     }
