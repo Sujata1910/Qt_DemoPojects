@@ -11,8 +11,7 @@
         <file>signup/password.png</file>
         <file>signup/show.png</file>
         <file>signup/username.png</file>
-
         <file>Listview.qml</file>
-
+        <file>GridView.qml</file>
     </qresource>
 </RCC>

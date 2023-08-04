@@ -125,6 +125,20 @@ ApplicationWindow {
                     console.log("Button 5 clicked")
 
                 }
+
+            }
+            RoundButton {
+                text: "Button 6"
+                font.pixelSize: 20
+                width: 100
+                height: 50
+
+                onClicked:{
+                    mainStackView.pop();
+                    mainStackView.push("GridView.qml")
+                    console.log("Button 6 clicked")
+
+                }
             }
         }
     }
