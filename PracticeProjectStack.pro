@@ -2,6 +2,7 @@ QT += core gui
 QT += widgets
 QT += qml
 QT += core
+QT += script
 
 CONFIG += c++11
 

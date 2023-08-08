@@ -14,6 +14,11 @@ Rectangle {
     property int cellSize: 220
     property int selectedItemIndex: -1
     visible:true
+
+    MainWindow{
+        id:mwclass
+    }
+
     Rectangle{
         id:cal
         width:parent.width*0.28
@@ -130,8 +135,10 @@ Rectangle {
                         font.pixelSize: 22
                         anchors.centerIn: parent
                     }
+
                     onClicked: {
                         input.text += " " + modelData + " "
+
                     }
                 }
 
@@ -144,24 +151,30 @@ Rectangle {
             anchors.topMargin: 25
             anchors.right:parent.right
             anchors.rightMargin: 35
-        Button {
-            width: 70
-            height: 70
-            Text {
-                id: name5
-                text: qsTr("=")
-                font.bold: true
-                font.pixelSize: 22
-                anchors.centerIn: parent
-            }
-            onClicked: {
-                try {
-                    input.text =eval(input.text)
-                } catch (e) {
-                    input.text = "Error"
+            Button {
+                width: 70
+                height: 70
+                Text {
+                    id: name5
+                    text: qsTr("=")
+                    font.bold: true
+                    font.pixelSize: 22
+                    anchors.centerIn: parent
+                }
+                onClicked: {
+                    try {
+                        var expression = input.text.replace(/\s+/g, '');
+                        var result = eval(expression);
+                        if (!isNaN(result)) {
+                            input.text = result.toString();
+                        } else {
+                            input.text = "Error";
+                        }
+                    } catch (e) {
+                        input.text = "Error";
+                    }
                 }
             }
-        }
         }
         RowLayout {
             id:clearbutton
