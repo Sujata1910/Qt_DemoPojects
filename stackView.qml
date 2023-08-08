@@ -143,6 +143,21 @@ ApplicationWindow {
 
                 }
             }
+            RoundButton {
+                text: "Calculator"
+                font.pixelSize: 20
+                width: 100
+                height: 50
+
+                onClicked:{
+                    mainStackView.pop();
+//                    mainStackView.push("Calculator.qml")
+                    mainStackView.push("Calculator.qml")
+
+                    console.log("Calculator Open")
+
+                }
+            }
         }
     }
 
