@@ -186,6 +186,41 @@ void MainWindow::writeJsonFile()
     }
 }
 
+void MainWindow::setunit(QString unit)
+{
+    sunit = unit;
+
+}
+
+QString MainWindow::getunit()
+{
+    return sunit;
+}
+double MainWindow::setdisunit(double dunit)
+{
+    if(dunit==meter){
+    return meter * 3.28084;
+   }
+    if(dunit==feet){
+    return feet / 3.28084;
+    }
+
+}
+
+
+//void MainWindow::unitConversion(QString)
+//{
+//    MainWindow::System currentUnitSystem = MainWindow::System::Meter;
+
+//    if (currentUnitSystem == MainWindow::System::Meter) {
+//        qDebug() << "Using Met Unit System";
+//        // Perform metric unit system calculations or conversions
+//    } else if (currentUnitSystem == MainWindow::System::Feet) {
+//        qDebug() << "Using Feet Unit System";
+//        // Perform imperial unit system calculations or conversions
+//    }
+//}
+
 // Json file reading
 
 QString MainWindow::readJsonFile()
@@ -226,7 +261,10 @@ QString MainWindow::readJsonFile()
     qDebug() << "Data read from JSON file.";
     qDebug() << jsonObject;
     return QString();
+
 }
+
+
 
 
 
