@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QCryptographicHash>
 #include <QRegularExpression>
+#include <QScriptEngine>
 
 class MainWindow : public QObject
 {
@@ -59,5 +60,6 @@ public:
 
     Q_INVOKABLE QString readJsonFile();
     Q_INVOKABLE void writeJsonFile();
+
 };
 #endif // MAINWINDOW_H
