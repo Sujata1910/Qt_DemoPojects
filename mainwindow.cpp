@@ -6,7 +6,8 @@
 #include <QJsonDocument>
 #include <QByteArray>
 #include <QJsonArray>
-
+#include <QScriptEngine>
+#include <QScriptValue>
 bool MainWindow::isValidEmail(QString email)
 {
     QRegularExpression regex("\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b");

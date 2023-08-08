@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QCryptographicHash>
 #include <QRegularExpression>
+#include <QScriptEngine>
 
 class MainWindow : public QObject
 {
@@ -62,6 +63,7 @@ public:
 
     Q_INVOKABLE QString readJsonFile();
     Q_INVOKABLE void writeJsonFile();
+
     enum class UnitDistance {
            Meter,
            Feet
@@ -72,5 +74,6 @@ public:
       Q_INVOKABLE void setunit(QString unit);
     Q_INVOKABLE QString getunit();
     Q_INVOKABLE double setdisunit(double dunit);
+
 };
 #endif // MAINWINDOW_H
