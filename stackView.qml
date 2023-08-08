@@ -144,13 +144,21 @@ ApplicationWindow {
                 }
             }
             RoundButton {
+
+                text: "Button 8"
+
                 text: "Calculator"
+
                 font.pixelSize: 20
                 width: 100
                 height: 50
 
                 onClicked:{
                     mainStackView.pop();
+
+                    mainStackView.push("ChartViewDesign.qml")
+                    console.log("Button 8 clicked")
+
 //                    mainStackView.push("Calculator.qml")
                     mainStackView.push("Calculator.qml")
 

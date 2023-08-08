@@ -6,7 +6,7 @@
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication  app(argc, argv);
+    QApplication  app(argc, argv);
     app.setOrganizationName("pdrl");
     app.setOrganizationDomain("https://github.com/8-DK");
     QQmlApplicationEngine engine;
