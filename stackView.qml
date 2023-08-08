@@ -144,11 +144,7 @@ ApplicationWindow {
                 }
             }
             RoundButton {
-
-                text: "Button 8"
-
-                text: "Calculator"
-
+                text: "ChartView"
                 font.pixelSize: 20
                 width: 100
                 height: 50
@@ -159,7 +155,21 @@ ApplicationWindow {
                     mainStackView.push("ChartViewDesign.qml")
                     console.log("Button 8 clicked")
 
-//                    mainStackView.push("Calculator.qml")
+                }
+            }
+            RoundButton {
+
+
+
+                text: "Calculator"
+
+                font.pixelSize: 20
+                width: 100
+                height: 50
+
+                onClicked:{
+
+
                     mainStackView.push("Calculator.qml")
 
                     console.log("Calculator Open")
