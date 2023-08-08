@@ -143,6 +143,19 @@ ApplicationWindow {
 
                 }
             }
+            RoundButton {
+                text: "Conversion"
+                font.pixelSize: 20
+                width: 100
+                height: 50
+
+                onClicked:{
+                    mainStackView.pop();
+                    mainStackView.push("Conversion.qml")
+                    console.log("Button 9 clicked")
+
+                }
+            }
         }
     }
 

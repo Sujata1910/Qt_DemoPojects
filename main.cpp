@@ -14,6 +14,5 @@ int main(int argc, char *argv[])
     engine.load(QUrl(QStringLiteral("qrc:/stackView.qml")));
     // engine.load(QUrl(QStringLiteral("qrc:/.qml")));
 
-
     return app.exec();
 }
