@@ -15,9 +15,13 @@
         <file>Listview.qml</file>
         <file>GridView.qml</file>
 
+        <file>Conversion.qml</file>
+
+
         <file>ChartViewDesign.qml</file>
 
         <file>Calculator.qml</file>
+
 
     </qresource>
 </RCC>

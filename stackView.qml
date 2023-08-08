@@ -150,10 +150,25 @@ ApplicationWindow {
                 height: 50
 
                 onClicked:{
-                    mainStackView.pop();
-
                     mainStackView.push("ChartViewDesign.qml")
                     console.log("Button 8 clicked")
+
+                }
+            }
+            RoundButton {
+
+                text: "Conversion"
+                font.pixelSize: 20
+                width: 100
+                height: 50
+
+                onClicked:{
+                    mainStackView.pop();
+                    mainStackView.push("Conversion.qml")
+                    console.log("Button 9 clicked")
+
+
+
 
                 }
             }
@@ -173,6 +188,7 @@ ApplicationWindow {
                     mainStackView.push("Calculator.qml")
 
                     console.log("Calculator Open")
+
 
                 }
             }

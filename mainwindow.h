@@ -29,6 +29,9 @@ public:
     QString write = "";
     QString jsonwrite = "";
     QString jsonread = "";
+    QString sunit="";
+    double meter;
+    double feet;
     Q_INVOKABLE bool isValidEmail(QString email);
     explicit MainWindow(QObject *parent = nullptr);
 
@@ -60,6 +63,17 @@ public:
 
     Q_INVOKABLE QString readJsonFile();
     Q_INVOKABLE void writeJsonFile();
+
+    enum class UnitDistance {
+           Meter,
+           Feet
+       };
+       Q_ENUM(UnitDistance)
+
+//    Q_INVOKABLE void unitConversion(QString);
+      Q_INVOKABLE void setunit(QString unit);
+    Q_INVOKABLE QString getunit();
+    Q_INVOKABLE double setdisunit(double dunit);
 
 };
 #endif // MAINWINDOW_H
