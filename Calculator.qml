@@ -5,6 +5,72 @@ import QtGraphicalEffects 1.14
 import Qt.labs.settings 1.0
 import MainWindowLib 1.0
 Rectangle {
+    function evaluateExpression() {
+          var result = evaluate(expression);
+          expression = result;
+      }
+
+      function evaluate(expr) {
+          var tokens = expr.match(/[+\-*/()]|\d+(\.\d+)?/g);
+          var outputQueue = [];
+          var operatorStack = [];
+
+          function getPrecedence(op) {
+              switch (op) {
+                  case "+":
+                  case "-":
+                      return 1;
+                  case "*":
+                  case "/":
+                      return 2;
+                  default:
+                      return 0;
+              }
+          }
+
+          for (var i = 0; i < tokens.length; i++) {
+              var token = tokens[i];
+              if (!isNaN(parseFloat(token))) {
+                  outputQueue.push(token);
+              } else if ("+-*/".indexOf(token) !== -1) {
+                  while (operatorStack.length > 0 && getPrecedence(operatorStack[operatorStack.length - 1]) >= getPrecedence(token)) {
+                      outputQueue.push(operatorStack.pop());
+                  }
+                  operatorStack.push(token);
+              }
+          }
+
+          while (operatorStack.length > 0) {
+              outputQueue.push(operatorStack.pop());
+          }
+
+          var stack = [];
+          for (var i = 0; i < outputQueue.length; i++) {
+              var token = outputQueue[i];
+              if (!isNaN(parseFloat(token))) {
+                  stack.push(token);
+              } else {
+                  var b = parseFloat(stack.pop());
+                  var a = parseFloat(stack.pop());
+                  switch (token) {
+                      case "+":
+                          stack.push(a + b);
+                          break;
+                      case "-":
+                          stack.push(a - b);
+                          break;
+                      case "*":
+                          stack.push(a * b);
+                          break;
+                      case "/":
+                          stack.push(a / b);
+                          break;
+                  }
+              }
+          }
+
+          return stack[0];
+      }
     id:gridrec
     border.color: "blue"
     border.width: 4
@@ -164,7 +230,7 @@ Rectangle {
                 onClicked: {
                     try {
                         var expression = input.text.replace(/\s+/g, '');
-                        var result = eval(expression);
+                        var result = evaluate(expression);
                         if (!isNaN(result)) {
                             input.text = result.toString();
                         } else {
