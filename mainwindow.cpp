@@ -204,7 +204,7 @@ double MainWindow::setdisunit(double dunit)
     if(dunit==feet){
     return feet / 3.28084;
     }
-
+    return dunit ;
 }
 
 
