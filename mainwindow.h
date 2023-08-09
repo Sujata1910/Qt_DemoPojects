@@ -7,6 +7,18 @@
 #include <QCryptographicHash>
 #include <QRegularExpression>
 #include <QScriptEngine>
+enum  UnitDistance {
+       Meter,
+       Feet
+   };
+enum  UnitArea {
+       Sq_meter,
+       Sq_Feet
+   };
+enum  UnitTemp {
+       Celsius,
+       Fahrenhiet
+   };
 
 class MainWindow : public QObject
 {
@@ -60,20 +72,15 @@ public:
     Q_INVOKABLE void setHosting(QString newHosting);
     Q_INVOKABLE QString getProject();
     Q_INVOKABLE void setProject(QString newProject);
-
     Q_INVOKABLE QString readJsonFile();
     Q_INVOKABLE void writeJsonFile();
 
-    enum class UnitDistance {
-           Meter,
-           Feet
-       };
-       Q_ENUM(UnitDistance)
+    Q_INVOKABLE double convertValue(double val,int selUnit);
 
-//    Q_INVOKABLE void unitConversion(QString);
-      Q_INVOKABLE void setunit(QString unit);
-    Q_INVOKABLE QString getunit();
-    Q_INVOKABLE double setdisunit(double dunit);
+    Q_INVOKABLE double convertareaValue(double areVal,double selarUnit);
+
+     Q_INVOKABLE double convertTempValue(double tempVal,double seltempUnit);
+
 
 };
 #endif // MAINWINDOW_H

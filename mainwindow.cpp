@@ -186,26 +186,46 @@ void MainWindow::writeJsonFile()
     }
 }
 
-void MainWindow::setunit(QString unit)
-{
-    sunit = unit;
 
-}
-
-QString MainWindow::getunit()
+double MainWindow::convertValue(double val,int selUnit)
 {
-    return sunit;
-}
-double MainWindow::setdisunit(double dunit)
-{
-    if(dunit==meter){
-    return meter * 3.28084;
+//  double currentindex=meter;
+    if(Meter==selUnit){
+    return val* 3.28084;
    }
-    if(dunit==feet){
-    return feet / 3.28084;
+
+    if(Feet==selUnit){
+    return val / 3.28084;
     }
-    return dunit ;
+    return 0 ;
 }
+//double MainWindow::getdisunit(){
+//    return feet;
+//}
+
+double MainWindow::convertareaValue(double areVal,double selarUnit)
+{
+    if(Sq_meter==selarUnit){
+    return areVal*10.76391042;
+   }
+    if(Sq_Feet==selarUnit){
+    return areVal / 10.76391042 ;
+    }
+    return 0 ;
+}
+
+double MainWindow::convertTempValue(double tempVal, double seltempUnit)
+{
+    if(Celsius==seltempUnit){
+    return (tempVal*1.8)+32;
+   }
+    if(Fahrenhiet==seltempUnit){
+    return (tempVal - 32.0) * (5.0 / 9.0);
+    }
+    return 0 ;
+}
+
+
 
 
 //void MainWindow::unitConversion(QString)
