@@ -4,17 +4,13 @@ import MainWindowLib 1.0
 import QtCharts 2.14
 
 Rectangle{
-    width:mainStack.width
+    width: mainStack.width
     height: mainStack.height * 0.8
-    // border.color: "black"
-    // border.width: 3
-    // color: "light grey"
-    //    anchors.right: parent.right
 
     ChartView {
         title: "Students Growth per Year"
-        width: parent.width * 0.3
-        height: parent.height * 0.7
+        width: parent.width
+        height: parent.height
         //  theme: ChartView.ChartThemeBrownSand
         anchors.left: chart.right
         legend.alignment: Qt.AlignBottom

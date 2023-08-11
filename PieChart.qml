@@ -4,22 +4,15 @@ import MainWindowLib 1.0
 import QtCharts 2.14
 
 Rectangle{
-    width:400
-    height: 400
-  //  anchors.top: upprec.bottom
-    // border.color: "black"
-    // border.width: 3
-   //  color: "red"
-
-
+    id: pierec
+    width: mainStack.width
+    height: mainStack.height * 0.8
 
     ChartView {
         id: piechart
         title: "Favourite Sports over World"
-        width: 450
-        height: 400
-        anchors.top: parent.top
-        anchors.topMargin: 100
+        width: pierec.width
+        height: pierec.height
         //  anchors.left: piechr.left
         legend.visible: false
         antialiasing: true

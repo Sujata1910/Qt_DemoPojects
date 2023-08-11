@@ -4,19 +4,15 @@ import MainWindowLib 1.0
 import QtCharts 2.14
 
 Rectangle{
-    width:mainStack.width
+    width: mainStack.width
     height: mainStack.height * 0.8
-    // border.color: "black"
-    // border.width: 3
-    // color: "light grey"
-    //    anchors.right: parent.right
 
 
     ChartView {
         id: chart
         title: "Student Performance"
-        width: parent.width * 0.35
-        height: parent.height * 0.6
+        width: parent.width
+        height: parent.height
         //  theme: ChartView.ChartThemeBrownSand
         anchors.left: piechart.right
         antialiasing: true
@@ -44,7 +40,7 @@ Rectangle{
 
         SplineSeries{
             id: chartseries
-            width: 5
+            width: 7
             XYPoint { x: new Date('December 17, 2000 03:24:00').getTime() ; y: 0.0 }
             XYPoint { x: new Date('December 18, 2001 04:25:00').getTime() ; y: 3.2 }
             XYPoint { x: new Date('December 19, 2002 05:26:00').getTime() ; y: 2.4 }
