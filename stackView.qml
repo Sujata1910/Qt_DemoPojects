@@ -69,7 +69,9 @@ ApplicationWindow {
 
 
         Row {
-            spacing: 35
+
+            spacing: 30
+
             anchors{
                 centerIn: parent
             }
