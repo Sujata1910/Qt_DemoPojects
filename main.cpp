@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
     qmlRegisterType<MainWindow>("MainWindowLib", 1, 0, "MainWindow");
 
+
     engine.load(QUrl(QStringLiteral("qrc:/stackView.qml")));
     // engine.load(QUrl(QStringLiteral("qrc:/.qml")));
 

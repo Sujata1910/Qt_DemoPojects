@@ -17,8 +17,12 @@
         <file>Conversion.qml</file>
         <file>ChartViewDesign.qml</file>
         <file>Calculator.qml</file>
+
         <file>PieChart.qml</file>
         <file>LineChart.qml</file>
         <file>BarChart.qml</file>
+
+        <file>Mapview.qml</file>
+
     </qresource>
 </RCC>
