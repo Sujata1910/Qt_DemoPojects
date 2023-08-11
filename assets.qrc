@@ -18,6 +18,9 @@
         <file>ChartViewDesign.qml</file>
         <file>Calculator.qml</file>
 
+        <file>osmmap.qml</file>
+
+
         <file>PieChart.qml</file>
         <file>LineChart.qml</file>
         <file>BarChart.qml</file>
