@@ -14,14 +14,11 @@
         <file>UserFrom.qml</file>
         <file>Listview.qml</file>
         <file>GridView.qml</file>
-
         <file>Conversion.qml</file>
-
-
         <file>ChartViewDesign.qml</file>
-
         <file>Calculator.qml</file>
-
-
+        <file>PieChart.qml</file>
+        <file>LineChart.qml</file>
+        <file>BarChart.qml</file>
     </qresource>
 </RCC>
