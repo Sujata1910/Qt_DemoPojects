@@ -69,7 +69,9 @@ ApplicationWindow {
 
 
         Row {
-            spacing: 80
+
+            spacing: 30
+
             anchors{
                 centerIn: parent
             }
@@ -86,7 +88,7 @@ ApplicationWindow {
             }
 
             RoundButton {
-                text: "Button 2"
+                text: "SignUp"
                 font.pixelSize: 20
                 width: 100
                 height: 50
@@ -131,7 +133,7 @@ ApplicationWindow {
 
             }
             RoundButton {
-                text: "Button 6"
+                text: "GridView"
                 font.pixelSize: 20
                 width: 100
                 height: 50
@@ -173,23 +175,23 @@ ApplicationWindow {
                 }
             }
             RoundButton {
-
-
-
                 text: "Calculator"
-
                 font.pixelSize: 20
                 width: 100
                 height: 50
-
                 onClicked:{
-
-
                     mainStackView.push("Calculator.qml")
-
                     console.log("Calculator Open")
-
-
+                }
+            }
+            RoundButton {
+                text: "Map"
+                font.pixelSize: 20
+                width: 100
+                height: 50
+                onClicked:{
+                    mainStackView.push("Mapview.qml")
+                    console.log("Map Open")
                 }
             }
             RoundButton {
