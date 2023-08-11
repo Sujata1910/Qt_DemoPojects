@@ -192,6 +192,20 @@ ApplicationWindow {
 
                 }
             }
+            RoundButton {
+                text: "Map"
+                font.pixelSize: 20
+                width: 100
+                height: 50
+                onClicked:{
+
+                    mainStackView.push("osmmap.qml")
+
+                    console.log("MapOpen")
+
+
+                }
+            }
         }
     }
 
