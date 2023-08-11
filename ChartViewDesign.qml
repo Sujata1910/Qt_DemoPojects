@@ -11,32 +11,60 @@ Rectangle{
     // color: "red"
 
     ChartView {
-        id: piechr
-        title: "Favourite Sports"
-        width: parent.width * 0.3
-        height: parent.height * 0.6
-        //   theme: ChartView.ChartThemeBrownSand
+        id: piechart
+        title: "Favourite Sports over World"
+        width: 450
+        height: 400
+      //  anchors.left: piechr.left
+        legend.visible: false
         antialiasing: true
 
         PieSeries {
-            id: pieSeries
-            PieSlice { label: "Cricket"; value: 40 }
-            PieSlice { label: "Hockey"; value: 15 }
-            PieSlice { label: "Football"; value: 20 }
-            PieSlice { label: "Basketball"; value: 15  }
-            PieSlice { label: "Badminton"; value: 10 }
+            id: pieOuter
+            size: 0.7
+            holeSize: 0.7
+            PieSlice { id: slice; label: "Cricket"; value: 40; color: "#8AB846" }
+            PieSlice { label: "Hockey"; value: 15; color: "#ff1493" }
+            PieSlice { label: "Football"; value: 20; color: "#DF8939" }
+            PieSlice { label: "Basketball"; value: 15; color: "#C0EEFF" }
+            PieSlice { label: "Badminton"; value: 10; color: "#ffff00" }
+        }
 
+        PieSeries {
+            size: 0.7
+            id: pieInner
+            holeSize: 0.15
 
+            PieSlice { label: "40 %"; value: 40; color: "#8AB846" }
+            PieSlice { label: "15 %"; value: 15; color: "#ff1493" }
+            PieSlice { label: "20 %"; value: 20; color: "#DF8939" }
+
+            PieSlice { label: "15 %"; value: 15; color: "#C0EEFF" }
+            PieSlice { label: "10 %"; value: 10; color: "#ffff00" }
+        }
+    }
+
+    Component.onCompleted: {
+        // Set the common slice properties dynamically for convenience
+        for (var i = 0; i < pieOuter.count; i++) {
+            pieOuter.at(i).labelPosition = PieSlice.LabelOutside;
+            pieOuter.at(i).labelVisible = true;
+         //   pieOuter.at(i).borderWidth = 3;
+        }
+        for (var i = 0; i < pieInner.count; i++) {
+            pieInner.at(i).labelPosition = PieSlice.LabelInsideNormal;
+            pieInner.at(i).labelVisible = true;
+         //   pieInner.at(i).borderWidth = 2;
         }
     }
 
     ChartView {
         id: chart
-        title: "Spline"
-        width: parent.width * 0.4
+        title: "Student Performance"
+        width: parent.width * 0.35
         height: parent.height * 0.6
         //  theme: ChartView.ChartThemeBrownSand
-        anchors.left: piechr.right
+        anchors.left: piechart.right
         antialiasing: true
         ValueAxis {
             id: axisY
@@ -93,9 +121,9 @@ Rectangle{
 
 
     ChartView {
-        title: "Bar series"
+        title: "Students Growth per Year"
         width: parent.width * 0.3
-        height: parent.height * 0.6
+        height: parent.height * 0.7
         //  theme: ChartView.ChartThemeBrownSand
         anchors.left: chart.right
         legend.alignment: Qt.AlignBottom

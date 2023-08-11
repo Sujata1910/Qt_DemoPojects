@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+
 <!-- Written by QtCreator 7.0.2, 2023-08-10T12:01:07. -->
+
+
+<!-- Written by QtCreator 7.0.2, 2023-08-09T11:17:00. -->
+<qtcreator>
+ <data>
+  <variable>EnvironmentId</variable>
+  <value type="QByteArray">{48c9cdfa-f681-4fca-a0ef-55705bcfbd99}</value>
+
+
+<!-- Written by QtCreator 7.0.2, 2023-08-08T17:03:30. -->
+
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
   <value type="QByteArray">{29d7b2de-3d88-4b4d-9354-0a9f0a21a896}</value>
+
+
+<!-- Written by QtCreator 7.0.2, 2023-08-08T16:17:23. -->
+<qtcreator>
+ <data>
+  <variable>EnvironmentId</variable>
+  <value type="QByteArray">{48c9cdfa-f681-4fca-a0ef-55705bcfbd99}</value
+
+
+
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -139,8 +161,32 @@
     <value type="int" key="QtQuickCompiler">1</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
+
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\sunit\OneDrive\Desktop\STACKFUN\build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/sunit/OneDrive/Desktop/STACKFUN/build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+
+
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\Administrator\Desktop\login\build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/Administrator/Desktop/login/build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+
+
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\sunit\OneDrive\Desktop\STACKFUN\build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/sunit/OneDrive/Desktop/STACKFUN/build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+
+
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\Administrator\Desktop\login\build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/Administrator/Desktop/login/build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\Administrator\Documents\build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/Administrator/Documents/build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\sunit\OneDrive\Desktop\STACKFUN\build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/sunit/OneDrive/Desktop/STACKFUN/build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+
+
+
+
+
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -249,7 +295,15 @@
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/sunit/OneDrive/Desktop/STACKFUN/build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+
+
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Administrator/Desktop/login/build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Debug</value>
+
+
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/sunit/OneDrive/Desktop/STACKFUN/build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Debug</value>
+
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
@@ -464,6 +518,12 @@
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+
+
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Administrator/Desktop/login/build-PracticeProjectStack-Desktop_Qt_5_14_1_MinGW_64_bit-Release</value>
+
+
+
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
