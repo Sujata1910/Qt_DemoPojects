@@ -11,8 +11,8 @@ import QtQuick.Dialogs 1.0
 ApplicationWindow {
     id: mainStack
     title: qsTr("StackView")
-    width: 1365
-    height: 765
+    width:Screen.width
+    height:Screen.height
     visible: true
 
     MainWindow{

@@ -69,8 +69,6 @@ void MainWindow::setEmail(QString newEmail)
     email = newEmail;
 }
 
-
-
 QString MainWindow::getVarphone()
 {
     return varphone;
@@ -90,6 +88,7 @@ void MainWindow::setAddress(QString newAddress)
 {
     address = newAddress;
 }
+
 
 QString MainWindow::getCity()
 {
@@ -131,6 +130,7 @@ void MainWindow::setZipcode(QString newZipcode)
     zipcode = newZipcode;
 }
 
+
 QString MainWindow::getHosting()
 {
     return hosting;
@@ -149,6 +149,17 @@ QString MainWindow::getProject()
 void MainWindow::setProject(QString newProject)
 {
     project = newProject;
+}
+
+void MainWindow::setValue(QString newName,QString newLastname,QString newEmail,QString newVarphone,QString newAddress,QString newCity,QString qualification)
+{
+    name = newName;
+    lastname = newLastname;
+    email = newEmail;
+    varphone = newVarphone;
+    address = newAddress;
+    city = newCity;
+    project = qualification;
 }
 
 // write data in json file

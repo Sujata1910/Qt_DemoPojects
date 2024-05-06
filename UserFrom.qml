@@ -16,6 +16,9 @@ Rectangle {
     MainWindow{
         id: textCls
     }
+    onFocusChanged: {
+        textCls.readJsonFile()
+    }
 
     Label{
         id: heading
@@ -294,6 +297,8 @@ Rectangle {
                     textCls.setWebsite1(twebsite.text)
                     // textCls.setHosting(radioButtonValue)
                     textCls.setProject(tpd.text)
+
+                    textCls.setValue(nameId.text,tlast.text,temail.text,tphone.text,taddress.text,tcity.text,tpd.text)
 
                     // textCls.writeFile(fileDialog)
 

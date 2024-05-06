@@ -82,5 +82,6 @@ public:
      Q_INVOKABLE double convertTempValue(double tempVal,double seltempUnit);
 
 
+    Q_INVOKABLE void setValue(QString newName, QString newLastname, QString newEmail, QString newVarphone, QString newAddress, QString newCity, QString newProject);
 };
 #endif // MAINWINDOW_H
