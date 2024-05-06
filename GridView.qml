@@ -7,14 +7,18 @@ import MainWindowLib 1.0
 
 Rectangle {
     id:gridrec
-    border.color: "blue"
-    border.width: 4
+   // border.color: "blue"
+   // border.width: 4
     width:mainStack.width
     height: mainStack.height * 0.8
-    color: "grey"
+    color: "#656565"
     property int cellSize: 220
     property int selectedItemIndex: -1
     visible:true
+
+    MainWindow{
+        id: textCls
+    }
 
     Text {
            id: selectedIndexText
@@ -30,21 +34,28 @@ Rectangle {
     GridView{
         id: gridView
         anchors.fill: parent
-        cellWidth: cellSize
-        cellHeight: cellSize
+        anchors.centerIn: parent
+        cellWidth: gridrec.width * 0.15
+        cellHeight: gridrec.height * 0.18
         model: myModel
+        anchors.left: parent.left
+        anchors.leftMargin: cellWidth * 0.25
+        anchors.top: parent.top
+        anchors.topMargin: cellHeight * 0.6
         delegate: Rectangle {
             id:rec
-            width: gridView.cellWidth
-            height: gridView.cellHeight
-            color: gridrec.selectedItemIndex === index ? "steelblue" :"lightblue"
-            border.color: gridrec.selectedItemIndex === index ?"white":"black"
-            border.width:gridrec.selectedItemIndex === index ? 7:1
+            width: gridView.cellWidth * 0.8
+            height: gridView.cellHeight * 0.7
+            color: gridrec.selectedItemIndex === index ? "#287DE2" :"#238E28"
+          //  border.color: gridrec.selectedItemIndex === index ?"white":"white"
+          //  border.width:gridrec.selectedItemIndex === index ? 2.2:1
+            radius: 25
+
             Text {
                 anchors.centerIn: parent
                 text: name
-                color: gridrec.selectedItemIndex === index ?"white":"black"
-                font.pixelSize: 30
+                color: gridrec.selectedItemIndex === index ?"white":"white"
+                font.pixelSize: 18
                 font.bold: true
             }
 
@@ -56,6 +67,20 @@ Rectangle {
                     text:"\nIndex: " + index
                     console.log("Clicked item index:", index);
                     selectedIndexText.text = "Selected Item Index: " + index;
+
+                    textCls.setName("Sujata")
+                    textCls.setLastname("Sirsat")
+                    textCls.setEmail("sujata.rs@gamil.com")
+                    textCls.setVarphone("8976576655")
+                    textCls.setAddress("Nashik,India")
+                    textCls.setCity("Nashik")
+
+                    textCls.setWebsite1("www.sddff.com")
+                    // textCls.setHosting(radioButtonValue)
+                    textCls.setProject("BE")
+
+                    textCls.setValue("Sujata","Sirsat","sujata.rs@gamil.com","8976576655","Nashik,India","Nashik","BE")
+
                 }
             }
         }
@@ -69,9 +94,9 @@ Rectangle {
         ListElement { name: "Todo List"}
         ListElement { name: "Camera"}
         ListElement { name: "Contact"}
-        ListElement { name: "Music"}
-        ListElement { name: "Movies"}
-        ListElement { name: "Calender"}
+        ListElement { name: "Convertor"}
+        ListElement { name: "Data"}
+        ListElement { name: "Read Data"}
         ListElement { name: "Messaging"}
         ListElement { name: "Todo List"}
         ListElement { name: "Camera"}

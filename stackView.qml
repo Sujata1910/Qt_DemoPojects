@@ -11,9 +11,12 @@ import QtQuick.Dialogs 1.0
 ApplicationWindow {
     id: mainStack
     title: qsTr("StackView")
-    width:Screen.width
-    height:Screen.height
+    width:1920
+    height:1080
     visible: true
+
+
+
 
     MainWindow{
         id: formClassId
@@ -22,6 +25,7 @@ ApplicationWindow {
 
             console.log("Reading file: " + fileUrl)
         }
+
 
         //        function writeFile(fileUrl, content) {
 
@@ -58,12 +62,13 @@ ApplicationWindow {
         id: upperrec
         width: parent.width
         height: parent.height * 0.15
-        //color: "red"
+        color: "#656565"
+        onFocusChanged: mainStackView.push("GridView.qml")
 
         StackView {
             id: mainStackView
             anchors.top: parent.bottom
-            initialItem: project1Page
+//            initialItem: "GridView.qml"
 
         }
 
@@ -76,52 +81,103 @@ ApplicationWindow {
                 centerIn: parent
             }
             RoundButton {
-                text: "LogIn"
-                font.pixelSize: 20
-                width: 100
+                width: 120
                 height: 50
                 onClicked:{
                     mainStackView.pop()
                     mainStackView.push("loginpage.qml")
                     console.log("Button 1 clicked")
                 }
+                background: Rectangle{
+                    height: parent.height
+                    width: parent.width
+                    color: "#3C3C3C"
+                    radius: 8
+                }
+
+                Text{
+                    text: "LogIn"
+                    font.pixelSize: 20
+                    color: "white"
+                    anchors.centerIn: parent
+
+                }
             }
 
             RoundButton {
-                text: "SignUp"
                 font.pixelSize: 20
-                width: 100
+                width: 120
                 height: 50
+
                 onClicked: {
                     mainStackView.pop();
                     mainStackView.push("SignUp.qml")
+                }
+                background: Rectangle{
+                    height: parent.height
+                    width: parent.width
+                    color: "#3C3C3C"
+                    radius: 8
+                }
+
+                Text{
+                    text: "SignUp"
+                    font.pixelSize: 20
+                    color: "white"
+                    anchors.centerIn: parent
+
                 }
             }
 
 
             RoundButton {
-                text: "Button 3"
                 font.pixelSize: 20
-                width: 100
+                width: 120
                 height: 50
                 onClicked: fileDialog.open()
+                background: Rectangle{
+                    height: parent.height
+                    width: parent.width
+                    color: "#3C3C3C"
+                    radius: 8
+                }
+
+                Text{
+                    text: "Browse"
+                    font.pixelSize: 20
+                    color: "white"
+                    anchors.centerIn: parent
+
+                }
             }
 
             RoundButton {
-                text: "Button 4"
                 font.pixelSize: 20
-                width: 100
+                width: 120
                 height: 50
                 onClicked: {
                     mainStackView.pop()
                     mainStackView.push("UserFrom.qml")
                 }
+                background: Rectangle{
+                    height: parent.height
+                    width: parent.width
+                    color: "#3C3C3C"
+                    radius: 8
+                }
+
+                Text{
+                    text: "FormUI"
+                    font.pixelSize: 20
+                    color: "white"
+                    anchors.centerIn: parent
+
+                }
             }
 
             RoundButton {
-                text: "Button 5"
                 font.pixelSize: 20
-                width: 100
+                width: 120
                 height: 50
 
                 onClicked:{
@@ -130,12 +186,25 @@ ApplicationWindow {
                     console.log("Button 5 clicked")
 
                 }
+                background: Rectangle{
+                    height: parent.height
+                    width: parent.width
+                    color: "#3C3C3C"
+                    radius: 8
+                }
+
+                Text{
+                    text: "ListView"
+                    font.pixelSize: 20
+                    color: "white"
+                    anchors.centerIn: parent
+
+                }
 
             }
             RoundButton {
-                text: "GridView"
                 font.pixelSize: 20
-                width: 100
+                width: 120
                 height: 50
 
                 onClicked:{
@@ -144,11 +213,24 @@ ApplicationWindow {
                     console.log("Button 6 clicked")
 
                 }
+                background: Rectangle{
+                    height: parent.height
+                    width: parent.width
+                    color: "#3C3C3C"
+                    radius: 8
+                }
+
+                Text{
+                    text: "GridView"
+                    font.pixelSize: 20
+                    color: "white"
+                    anchors.centerIn: parent
+
+                }
             }
             RoundButton {
-                text: "ChartView"
                 font.pixelSize: 20
-                width: 100
+                width: 120
                 height: 50
 
                 onClicked:{
@@ -156,48 +238,96 @@ ApplicationWindow {
                     console.log("Button 8 clicked")
 
                 }
+                background: Rectangle{
+                    height: parent.height
+                    width: parent.width
+                    color: "#3C3C3C"
+                    radius: 8
+                }
+
+                Text{
+                    text: "Chart"
+                    font.pixelSize: 20
+                    color: "white"
+                    anchors.centerIn: parent
+
+                }
             }
             RoundButton {
-
-                text: "Conversion"
                 font.pixelSize: 20
-                width: 100
+                width: 120
                 height: 50
 
                 onClicked:{
                     mainStackView.pop();
                     mainStackView.push("Conversion.qml")
                     console.log("Button 9 clicked")
+                }
+                background: Rectangle{
+                    height: parent.height
+                    width: parent.width
+                    color: "#3C3C3C"
+                    radius: 8
+                }
 
-
-
+                Text{
+                    text: "Convo"
+                    font.pixelSize: 20
+                    color: "white"
+                    anchors.centerIn: parent
 
                 }
             }
             RoundButton {
-                text: "Calculator"
                 font.pixelSize: 20
-                width: 100
+                width: 120
                 height: 50
                 onClicked:{
                     mainStackView.push("Calculator.qml")
                     console.log("Calculator Open")
                 }
+                background: Rectangle{
+                    height: parent.height
+                    width: parent.width
+                    color: "#3C3C3C"
+                    radius: 8
+                }
+
+                Text{
+                    text: "Calc"
+                    font.pixelSize: 20
+                    color: "white"
+                    anchors.centerIn: parent
+
+                }
             }
             RoundButton {
-                text: "Map"
                 font.pixelSize: 20
-                width: 100
+                width: 120
                 height: 50
+
                 onClicked:{
                     mainStackView.push("Mapview.qml")
                     console.log("Map Open")
                 }
+                background: Rectangle{
+                    height: parent.height
+                    width: parent.width
+                    color: "#3C3C3C"
+                    radius: 8
+                }
+
+                Text{
+                    text: "Maps"
+                    font.pixelSize: 20
+                    color: "white"
+                    anchors.centerIn: parent
+
+                }
             }
             RoundButton {
-                text: "Map"
                 font.pixelSize: 20
-                width: 100
+                width: 120
                 height: 50
                 onClicked:{
 
@@ -207,24 +337,31 @@ ApplicationWindow {
 
 
                 }
+                background: Rectangle{
+                    height: parent.height
+                    width: parent.width
+                    color: "#3C3C3C"
+                    radius: 8
+                }
+
+                Text{
+                    text: "Help"
+                    font.pixelSize: 20
+                    color: "white"
+                    anchors.centerIn: parent
+
+                }
             }
         }
     }
 
-    Component {
-        id: project1Page
-        Rectangle {
-            id:recinit
-            color: "lightblue"
-            width:mainStack.width
-            height: mainStack.height * 0.8
-            border.color: "blue"
-            Text {
-                text: "Hello Welcome To StackView"
-                font.pointSize: 50
-                anchors.centerIn: recinit
-            }
 
-        }
-    }
+//    Rectangle {
+//        id:recinit
+//        width:mainStack.width
+//        height: mainStack.height * 0.8
+//        color: "#656565"
+
+//    }
+
 }
